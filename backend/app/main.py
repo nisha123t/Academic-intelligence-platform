@@ -67,12 +67,18 @@ async def upload_paper(file: UploadFile = File(...)):
         ) from exc
 
     analysis = analyze_paper(paper["text"], paper["sections"])
-    paper_id = save_paper({
-        "filename": safe_name,
-        "metadata": paper["metadata"],
-        "sections": paper["sections"],
-        "analysis": analysis,
-    })
+    try:
+        paper_id = save_paper({
+            "filename": safe_name,
+            "metadata": paper["metadata"],
+            "sections": paper["sections"],
+            "analysis": analysis,
+        })
+    except Exception as exc:
+        raise HTTPException(
+            status_code=503,
+            detail=f"Paper storage is unavailable: {str(exc)}",
+        ) from exc
 
     return {
         "paper_id": paper_id,

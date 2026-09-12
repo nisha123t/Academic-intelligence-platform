@@ -34,5 +34,10 @@ def get_paper(paper_id: str) -> dict | None:
     if client is None:
         return _LOCAL_PAPERS.get(paper_id)
 
-    response = client.table("papers").select("*").eq("id", paper_id).maybe_single().execute()
+    try:
+        response = client.table("papers").select("*").eq("id", paper_id).maybe_single().execute()
+    except Exception as exc:
+        if getattr(exc, "code", None) == "204":
+            return None
+        raise
     return response.data

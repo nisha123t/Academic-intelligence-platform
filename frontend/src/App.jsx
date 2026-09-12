@@ -19,7 +19,7 @@ function App() {
     formData.append('file', file)
     try {
       const response = await fetch(`${API_URL}/papers/upload`, { method: 'POST', body: formData })
-      const result = await response.json()
+      const result = await response.json().catch(() => ({}))
       if (!response.ok) throw new Error(result.detail || 'Upload failed')
       setPaper(result)
       setStatus('Analysis complete')
