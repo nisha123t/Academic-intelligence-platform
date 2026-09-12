@@ -6,7 +6,8 @@ from app.services.paper_analyzer import analyze_paper
 from app.services.paper_repository import get_paper, save_paper
 import os
 import shutil
-
+from dotenv import load_dotenv
+load_dotenv()
 app = FastAPI(
     title="Academic Literature Intelligence Platform",
     version="1.0.0"

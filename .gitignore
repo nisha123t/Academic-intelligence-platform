@@ -21,6 +21,7 @@ data/
 
 # Environment variables & secrets 
 .env
+backend/.env
 .env.local
 
 # Operating System files
