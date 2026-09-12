@@ -1,0 +1,29 @@
+# Virtual Environments ()
+.venv/
+venv/
+env/
+ENV/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing / Pytest
+.pytest_cache/
+.pytest_cache*
+.coverage
+htmlcov/
+
+# Local Uploads / User Data (Stop your uploaded PDFs from going to GitHub)
+backend/uploads/
+data/
+
+# Environment variables & secrets 
+.env
+.env.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
