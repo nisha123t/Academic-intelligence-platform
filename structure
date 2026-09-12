@@ -1,0 +1,87 @@
+backend/
+│
+├── app/
+│   ├── main.py
+│   │
+│   ├── api/
+│   │   ├── routes/
+│   │   │   ├── papers.py
+│   │   │   ├── analysis.py
+│   │   │   ├── statistics.py
+│   │   │   ├── research_gaps.py
+│   │   │   ├── relationships.py
+│   │   │   └── forecasting.py
+│   │   └── dependencies.py
+│   │
+│   ├── core/
+│   │   ├── config.py
+│   │   └── security.py
+│   │
+│   ├── database/
+│   │   ├── database.py
+│   │   ├── models.py
+│   │   └── schemas.py
+│   │
+│   ├── services/
+│   │   ├── pdf_parser.py
+│   │   ├── metadata_extractor.py
+│   │   ├── section_detector.py
+│   │   ├── statistics_extractor.py
+│   │   ├── claim_extractor.py
+│   │   ├── embedding_service.py
+│   │   ├── contradiction_detector.py
+│   │   ├── reliability_engine.py
+│   │   ├── research_gap_engine.py
+│   │   └── forecasting_engine.py
+│   │
+│   ├── ml/
+│   │   ├── models/
+│   │   ├── preprocessing.py
+│   │   ├── feature_engineering.py
+│   │   └── evaluation.py
+│   │
+│   ├── utils/
+│   │   ├── text_utils.py
+│   │   ├── file_utils.py
+│   │   └── validators.py
+│   │
+│   └── prompts/
+│       ├── claim_extraction.txt
+│       ├── research_gap.txt
+│       └── explanation.txt
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── test_api.py
+│
+├── uploads/
+├── data/
+├── requirements.txt
+├── .env
+├── .gitignore
+└── README.md
+
+
+
+
+backend/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── routes/
+│   │       └── __init__.py
+│   ├── core/
+│   ├── database/
+│   ├── services/
+│   ├── ml/
+│   ├── utils/
+│   └── prompts/
+├── tests/
+├── uploads/
+├── data/
+├── venv/
+├── requirements.txt
+└── .gitignore

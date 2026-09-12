@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: literature-intelligence-api
+    runtime: docker
+    rootDir: backend
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        value: https://literature-intelligence-ui.onrender.com
+
+  - type: web
+    name: literature-intelligence-ui
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://literature-intelligence-api.onrender.com
