@@ -17,6 +17,7 @@ htmlcov/
 
 # Local Uploads / User Data (Stop your uploaded PDFs from going to GitHub)
 backend/uploads/
+/uploads/
 data/
 
 # Environment variables & secrets 
@@ -27,4 +28,3 @@ backend/.env
 # Operating System files
 .DS_Store
 Thumbs.db
-
